@@ -1,7 +1,7 @@
 {
   "name": "gears",
   "version": "1.0.0",
-  "description": "a (hopefully) efficient algorithm for finding factors in a given range that reach a desired product",
+  "description": "An efficient algorithm for finding up to 6 gears to satisfy the gear problem that Rob said that one time",
   "main": "index.js",
   "license": "MIT"
 }
