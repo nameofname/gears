@@ -37,7 +37,7 @@ let solution1 = solve({
 
 console.log(JSON.stringify(solution1));
 
-const arr1 = solution.reduce((prev, { numerator, denominator }) => {
+const arr1 = solution1.reduce((prev, { numerator, denominator }) => {
     return prev.concat([numerator, denominator]);
 }, []);
 
