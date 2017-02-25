@@ -29,5 +29,5 @@ module.exports = (sortedQuotients) => {
         }
     }
 
-    return mergeSort(pairs);
+    return mergeSort(pairs, o => o.value);
 };
