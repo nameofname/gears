@@ -25,7 +25,7 @@ const buildUniquePairs = require('./buildUniquePairs');
  * @param upperBound
  * @param lowerBound
  */
-module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, upperBound, lowerBound }) => {
+module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, lowerBound, upperBound }) => {
     const sortedQuotients = calculateQuotients(lowerBound, upperBound);
     let requiredFactor;
     requiredFactor = requiredFactors.reduce((prev, val) => (prev * val), 1);

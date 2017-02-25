@@ -15,7 +15,7 @@ const dedupe = arr => {
     });
 };
 
-module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, upperBound, lowerBound }) => {
+module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, lowerBound, upperBound }) => {
 
     const factorsProduct = requiredFactors.reduce((prev, n) => prev * n);
     const targetNumber = desiredNumber / factorsProduct;
@@ -27,9 +27,8 @@ module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, upperBound, l
     }
 
     primeFactors = dedupe(primeFactors);
+    primeFactors = mergeSort(primeFactors);
+    // now we have a sorted array of all the prime factors between the lower and upper bound
 
-    // TODOD !
-    return primeFactors;
-
-    return mergeSort(primeFactors);
+    
 };
