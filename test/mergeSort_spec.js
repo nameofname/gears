@@ -3,7 +3,7 @@
 
 const mergeSort = require('../src/mergeSort');
 const timer = require('./timer');
-
+const mapArray = a => a.map(n => ({ value : n }));
 
 const testMergeSort = () => {
 
@@ -22,6 +22,10 @@ const testMergeSort = () => {
 
     const sorted2 = mergeSort(arr2);
     console.log(sorted2);
+
+    const arr3 = mapArray(arr1);
+    const sorted3 = mergeSort(arr3, n => n.value);
+    console.log(sorted3);
 };
 
 

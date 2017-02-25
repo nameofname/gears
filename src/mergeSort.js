@@ -2,15 +2,26 @@
 
 
 /**
- * Implementation of merge sort specific to gears problem.
- * Sorts objects with structure:
- *      {
+ * Implementation of merge sort.
+ *
+ * To aid in the implementation of the gears problem, you can optionally pass a method to get the value of each
+ * entry in the array. This is helpful in the gears problem because I don't use a normal array of numbers, each array
+ * entry is an object with a value property pointing at a number.
+ *
+ * Example sorting object with structure :
+ *      const arr = {
  *          value : n,
  *          ...
  *      }
+ *
+ *      const sorted = mergeSort(arr, n => n.value);
+ *
+ * const
  * @param arr
  * @returns {*}
  */
+let _getVal;
+let _defaultValueGetter = n => n;
 const mergeSort = (arr) => {
 
     if (arr.length === 1) {
@@ -50,7 +61,7 @@ const _merge = (arr1, arr2) => {
             arr[i] = left;
             lowIdx++;
         } else {
-            if (left.value <= right.value) {
+            if (_getVal(left) <= _getVal(right)) {
                 arr[i] = left;
                 lowIdx++;
             } else {
@@ -64,4 +75,11 @@ const _merge = (arr1, arr2) => {
 };
 
 
-module.exports = mergeSort;
+module.exports = (arr, valGetter) => {
+    if (valGetter) {
+        _getVal = valGetter;
+    } else {
+        _getVal = _defaultValueGetter;
+    }
+    return mergeSort(arr);
+};
