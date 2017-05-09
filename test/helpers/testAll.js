@@ -1,7 +1,7 @@
 "use strict";
 
 require('../oldTests/calculateQuotients_spec.js');
-require('../oldTests/mergeSort_spec.js');
+require('../tests/mergeSort_spec.js');
 require('../oldTests/solution_spec.js');
 
 console.log('not executing long running tests');
