@@ -12,13 +12,15 @@ module.exports = ({ desiredNumber, requiredFactors, numberOfPairs, lowerBound, u
     const sortedQuotients = calculateQuotients(lowerBound, upperBound);
     const requiredFactor = requiredFactors.reduce((prev, val) => (prev * val), 1);
     const desiredProduct = desiredNumber / requiredFactor;
-    let result;
-
+    let result = sortedQuotients;
+    let lastOutput;
 
     for (let i = 0; i <= numberOfPairs; i++) {
-        result = mapClosestProduct().result;
+        lastOutput = mapClosestProduct(result, sortedQuotients, desiredProduct);
+        result = lastOutput.result;
         result = mergeSort(result, o => o.value);
     }
 
+    return lastOutput;
 };
 

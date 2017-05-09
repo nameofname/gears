@@ -5,6 +5,7 @@ const noFractionWarning = 'WARNING! None of the values passed to mapClosestProdu
 module.exports = (arr1, arr2, desiredProduct) => {
 
     let closestProduct;
+    let closestObject;
     let currSearchIdx;
     let hasFraction = false;
 
@@ -44,8 +45,10 @@ module.exports = (arr1, arr2, desiredProduct) => {
 
         if (idx === 0) {
             closestProduct = currProduct;
-        } else {
-            closestProduct = isClosest ? currProduct : closestProduct;
+            closestObject = buddy;
+        } else if (isClosest) {
+            closestProduct = currProduct;
+            closestObject = buddy;
         }
 
         newObj.value = currValue * buddy.value;
@@ -58,6 +61,7 @@ module.exports = (arr1, arr2, desiredProduct) => {
         result,
         meta : {
             closestProduct,
+            closestObject,
             warning : hasFraction ? undefined : noFractionWarning
         }
     };
