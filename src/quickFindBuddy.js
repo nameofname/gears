@@ -2,7 +2,7 @@
 
 
 /**
- * Takes in 2 sorted lists and finds the matching pair from each list which produces the closest match to the deired
+ * Takes in 2 sorted lists and finds the matching pair from each list which produces the closest match to the desired
  * product. Both lists must be sorted or the return value will be incorrect.
  *
  * @param arrayOfNumbers - sorted array of objects, each object must have a 'value' property to match against
