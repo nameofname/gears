@@ -1,0 +1,50 @@
+i shall now summarize my position : 
+- there is a function to find a “buddy” from an ordered list of numbers 
+- the buddy is the number which when multiplied with the first number produces the closest product to the desired output
+- if the ordered list being compared against is itself an ordered list (or the ordered list is being compared against itself) - you can use the position of the previous result to very quickly find the position of the next entry in the list
+
+step 1 :
+- calculate each unique ratio in your list, using every number as a numerator divided by every other number in the list.
+	- de-dupe this list 
+- for each number of ratios allowed in your formula, calculate 
+
+oh yeah, fuck. 
+no
+
+for each number, find it’s buddy
+that will leave the same number of pairs as there were initial numbers
+for each resulting number, find it’s buddy
+and so on, the list never growing, it’s O(N) - or just a little more - to the de-duped list of numbers. 
+
+
+question : do we need to sort the list in between each step? 
+yeah, probably. 
+
+
+
+- for the number of entries in the ordered list
+
+- there is also a possibility that i can claculate the minimum number of viable combinations using prime numbers, but there are challenges to this approach I have not yet answered easily.
+
+
+
+mapClosestProduct
+arr1, arr2, desiredProduct
+
+
+- for the first number in arr1 loop upwards starting at the beginning of arr2, until you start getting farther away from the desired product
+- store the index at which the buddy was located
+- for each remaining entry in arr1, loop downwards from the last used index until the same condition is met (ie. you are getting farther away)
+- store that index for the next iteration
+
+
+in this formula we have : 
+currValue, coFactor
+
+
+I FUCKING GOT IT. 
+do this algorithm
+until you get a number that is within your limit
+ie. add more sets of gears until the number is very close to the one you want
+THEN! 
+factor the primes out of all the numerators and denominators and reduce it to fit the number of gear pairs you are allowed. 
