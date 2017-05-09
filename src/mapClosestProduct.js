@@ -9,7 +9,7 @@ module.exports = (arr1, arr2, desiredProduct) => {
 
     const out = arr1.map((obj, idx) => {
 
-        const { value: currValue, numerator: currNumerator, denominator: currDenominator } = obj;
+            const { value: currValue, numerator: currNumerator, denominator: currDenominator } = obj;
         const desiredBuddy = desiredProduct / currValue;
         const distanceFromDesired = (n) => Math.abs(desiredBuddy - n);
 
