@@ -32,7 +32,7 @@ describe("mergeSort", () => {
     it('should sort this array of objects where the number is object.value', () => {
         const arr3 = mapArray(arr1);
         const sorted = mergeSort(arr3, n => n.value);
-        expect(sorted).to.equal(sorted.concat());
+        expect(sorted).to.deep.equal(sorted.concat());
     });
 
 });
