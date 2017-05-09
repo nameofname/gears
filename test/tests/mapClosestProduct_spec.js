@@ -19,13 +19,19 @@ describe("mapClosestProduct", () => {
         { value: 8, metaList: ['bla']}
     ];
 
+    let result;
+
     it('should return an array the same length as the first array passed', () => {
-        const res = mapClosestProduct(arr1, arr2, 9);
-        console.log(res);
-        expect(res.length).to.equal(arr1.length);
+        result = mapClosestProduct(arr1, arr2, 9);
+        console.log(result);
+        expect(result.length).to.equal(arr1.length);
     });
 
-    // it('should modify each entry in array 1 to be closer to the desired product', () => {
-    // });
+    it('should be able to take in an array that it alraedy produced and refine the set further', () => {
+        result = mapClosestProduct(result, arr2, 9);
+        result = mapClosestProduct(result, arr2, 9);
+        console.log(result);
+        expect(result.length).to.equal(arr1.length);
+    });
 
 });
