@@ -59,9 +59,9 @@ describe("mapClosestProduct", () => {
         result = mapClosestProduct(result, arr2, 9).result;
         result = sortIt(result);
         result = mapClosestProduct(result, arr2, 9).result;
-        console.log('this one should be closer');
-        console.log('this one should be closer');
-        console.log(result);
+        // console.log('this one should be closer');
+        // console.log('this one should be closer');
+        // console.log(result);
         expect(result.length).to.equal(arr1.length);
     });
 
@@ -71,12 +71,10 @@ describe("mapClosestProduct", () => {
     });
 
     it("should accurately calculate closest values based on passed inputs", () => {
-        const res = mapClosestProduct(arr1, arr2, 9);
-        expect(res[0].value).to.equal(9);
-        expect(res[0].value).to.equal(9);
-        expect(res[0].value).to.equal(9);
-        expect(res[0].value).to.equal(9);
-        expect(res[0].value).to.equal(9);
+        const res = mapClosestProduct(arr1, arr2, 9)
+            .result
+            .map( o => o.value);
+        expect(res).to.deep.equal([ 6, 8, 10, 9, 12 ]);
     });
 
 });

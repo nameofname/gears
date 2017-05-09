@@ -16,8 +16,16 @@ module.exports = (lowerBound, upperBound) => {
     for (let i = lowerBound; i <= upperBound; i++) {
         for (let j = lowerBound; j <= upperBound; j++) {
             const quotient = i / j;
-            const obj = {quotient, numerator: i, denominator: j};
-            arraySortPush(obj, 'quotient', arr);
+            // Note* include quotient, value and num / denom props for backwards compatability.
+            // New style = value, metaList
+            // Old style = quotient, numerator, denominator
+            arraySortPush({
+                value: quotient,
+                quotient,
+                numerator: i,
+                denominator: j,
+                metaList: [{ numerator: i, denominator: j }]
+            }, 'quotient', arr);
         }
     }
 

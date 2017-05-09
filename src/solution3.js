@@ -2,7 +2,7 @@
 "use strict";
 
 const calculateQuotients = require('./calculateQuotients');
-const quickFindBuddy = require('./quickFindBuddy');
+const mapClosestProduct = require('./mapClosestProduct');
 
 // const arraySortPush = require('./arraySortPush');
 const mergeSort = require('./mergeSort');

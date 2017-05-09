@@ -1,6 +1,6 @@
 "use strict";
 
-require('../oldTests/calculateQuotients_spec.js');
+require('../tests/calculateQuotients_spec.js');
 require('../tests/mergeSort_spec.js');
 require('../oldTests/solution_spec.js');
 
