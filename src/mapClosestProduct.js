@@ -42,17 +42,16 @@ module.exports = (arr1, arr2, desiredProduct) => {
 
         const currProduct = currValue * buddy.value;
         const isClosest = (Math.abs(desiredProduct - currProduct) < Math.abs(desiredProduct - closestProduct));
+        newObj.value = currProduct;
+        newObj.metaList = newObj.metaList.concat(buddy.metaList);
 
         if (idx === 0) {
             closestProduct = currProduct;
-            closestObject = buddy;
+            closestObject = newObj;
         } else if (isClosest) {
             closestProduct = currProduct;
-            closestObject = buddy;
+            closestObject = newObj;
         }
-
-        newObj.value = currValue * buddy.value;
-        newObj.metaList = newObj.metaList.concat(buddy.metaList);
 
         return newObj;
     });
