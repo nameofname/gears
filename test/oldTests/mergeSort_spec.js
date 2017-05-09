@@ -1,8 +1,8 @@
 "use strict";
 
 
-const mergeSort = require('../src/mergeSort');
-const timer = require('./timer');
+const mergeSort = require('../../src/mergeSort');
+const timer = require('../helpers/timer');
 const mapArray = a => a.map(n => ({ value : n }));
 
 const testMergeSort = () => {

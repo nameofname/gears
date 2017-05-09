@@ -10,6 +10,7 @@ const mergeSort = require('./mergeSort');
  * @returns {Array}
  */
 module.exports = (sortedQuotients) => {
+    console.warn('This function does not produce a sorted list, and is therefore pretty much useless jack ass.');
     let pairs = [];
     usedProducts = new Map();
 

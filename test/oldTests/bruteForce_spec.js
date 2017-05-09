@@ -1,7 +1,7 @@
 "use strict";
 
-const timer = require('./timer');
-const bruteForce = require('../src/bruteForce');
+const timer = require('../helpers/timer');
+const bruteForce = require('../../src/bruteForce');
 
 
 // BRUTE FORCE :

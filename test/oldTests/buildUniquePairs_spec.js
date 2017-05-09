@@ -1,10 +1,10 @@
 "use strict";
 
 
-const timer = require('./timer');
-const calculateQuotients = require('../src/calculateQuotients');
-const buildUniquePairs = require('../src/buildUniquePairs');
-const calcFinalValue = require('../src/calcFinalValue');
+const timer = require('../helpers/timer');
+const calculateQuotients = require('../../src/calculateQuotients');
+const buildUniquePairs = require('../../src/buildUniquePairs');
+const calcFinalValue = require('../../src/calcFinalValue');
 
 
 const testListMaker = () => {

@@ -1,6 +1,12 @@
 "use strict";
 
-
+/**
+ * 
+ * @param obj
+ * @param comparisonField
+ * @param arr
+ * @returns {*}
+ */
 module.exports = (obj, comparisonField, arr) => {
     const value = obj[comparisonField];
 

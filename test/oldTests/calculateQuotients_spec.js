@@ -1,8 +1,8 @@
 "use strict";
 
 
-const calculateQuotients = require('../src/calculateQuotients');
-const timer = require('./timer');
+const calculateQuotients = require('../../src/calculateQuotients');
+const timer = require('../helpers/timer');
 
 
 const findQuotiens = () => {
