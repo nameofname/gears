@@ -32,8 +32,3 @@ Combinatorial math comes into play when trying to reduce a set. This tool is use
 
 http://www.calculatorsoup.com/calculators/discretemathematics/combinationsreplacement.php
 
-## Todo : 
-
-- new implementation of buddy finder (mapClosestProduct) relies on the property .value instead of .quotient
-- the tests for it are incomplete
-- 
